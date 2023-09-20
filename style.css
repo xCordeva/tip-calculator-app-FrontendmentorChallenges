@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Overpass:wght@200&family=Space+Mono&display=swap');
+
+*{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+body{
+    background-color:  hsl(185, 41%, 84%);
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: white;
+    padding: 30px;
+    margin: 50px 0 0 0;
+    border-radius: 30px;
+    display: flex;
+}
+
+.left-side{
+    width: 50%;
+    margin: 0 40px 50px 0;
+}
+
+.left-side p{
+    color: hsl(184, 14%, 56%);
+    margin: 0;
+}
+
+.left-side .bill-input-container{
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.left-side input{
+    background-color: hsl(189, 41%, 97%);
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    direction: rtl;
+    padding: 5px 10px 5px 5px;
+    position: absolute;
+    width: 95%;
+    color: hsl(183, 100%, 15%);
+}
+
+.left-side .icon{
+    position: absolute;
+    padding: 10px;
+}
+
+.left-side .tips-container{
+    margin: 50px 0 50px 0;
+}
+
+.left-side .tips{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 10px;
+}
+
+.left-side .tips button{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border: none;
+    width: 95%;
+    height: 95%;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;  
+}
+
+.left-side .tips input{
+    width: 95%;
+    height: 95%;
+    border-radius: 3px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.left-side .tips .clicked{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.left-side .tips .clicked:hover{
+    background-color: hsl(172, 67%, 45%);
+}
+
+.left-side .tips button:hover{
+    background-color: hsl(185, 41%, 84%);
+    color:hsl(183, 100%, 15%) ;
+}
+
+.left-side .num-zero{
+    color: red;
+    display: none;
+}
+
+.left-side .num-people{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.left-side .num-of-people-container{
+    margin-top: 5px;
+    position: relative;
+}
+
+.right-side{
+    width: 45%;
+    background-color: hsl(183, 100%, 15%) ;
+    border-radius: 20px;
+    padding: 0 40px;
+}
+
+.right-side .tip-amount, .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color :hsl(189, 41%, 97%)
+}
+
+.right-side h6{
+    position: absolute;
+    margin: 50px 0 0 0;
+    color: hsl(184, 14%, 56%);
+}
+
+.right-side p{
+    font-size: 2em;
+    color: hsl(172, 67%, 45%);
+}
+
+.right-side button:disabled{
+    font-size: 1.2em;
+    background-color: hsl(180, 70%, 20%);
+    border-radius: 5px;
+    border: none;
+    color: hsl(186, 14%, 43%);
+    width: 100%;
+    margin: 70px 0 20px 0;
+    padding: 10px;
+}
+
+.right-side button:enabled{
+    font-size: 1.2em;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 5px;
+    border: none;
+    color: hsl(180, 70%, 20%);
+    width: 100%;
+    margin: 70px 0 20px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.right-side button:enabled:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    transition: 0.5s;
+}
+
+
+/* Credits */
+.credit {
+    font-size: 11px;
+    text-align: center; 
+    bottom: 0;
+    font-weight: 400;
+    margin: 50px 0 0 0;
+    position: fixed;
+}
+
+.credit a{
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+    font-weight: 1000;
+}
+.credit a:hover{
+    color: hsl(183, 100%, 15%);
+}
+
+
+@media (max-width:605px){
+    .body{
+        margin-top: 40px;
+    }
+    .container{
+        width: 90%;
+        flex-direction: column;
+    }
+    .left-side{
+        width: 100%;
+    }
+    .left-side .num-zero{
+        color: red;
+        width: 40%;
+        float: right;
+    }
+    .left-side .num-people{
+        float: left;
+    }
+    .right-side{
+        width: auto;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .credit {
+        display: none;
+    }
+}
+
+@media (max-width:450px){
+    .left-side .tips{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    h4{
+        font-size: 15px;
+    }
+    .right-side p{
+        font-size: 1.5em;
+    }
+    .left-side .num-zero{
+        color: red;
+        display: none;
+        width: 100%;
+        float: none;
+    }
+    .left-side .num-people{
+        display: block;
+        float: none;
+    }
+}
