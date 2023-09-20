@@ -50,6 +50,6 @@ Throughout the project, I gained valuable insights and skills, including:
 
 
 ## Demo 
-You can check out a live demo of this website [here](https://xcordeva.github.io/FrontEndMentor-Challenges/tip-calculator-app/).
+You can check out a live demo of this website [here](https://xcordeva.github.io/tip-calculator-app-FrontendmentorChallenges).
 
 
